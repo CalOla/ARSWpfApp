@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49987/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49987/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49987/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ARSWcfService" />
+      <xsd:import schemaLocation="http://localhost:49987/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddFlight_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFlight" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddFlight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFlightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSignInCredentials_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSignInCredentials" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSignInCredentials_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSignInCredentialsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllFlights_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFlights" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllFlights_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFlightsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMyFlights_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyFlights" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMyFlights_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMyFlightsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddSeat_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSeat" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddSeat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSeatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSelectedSeats_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectedSeats" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSelectedSeats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectedSeatsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddUser" message="tns:IService1_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddUserResponse" message="tns:IService1_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFlight">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddFlight" message="tns:IService1_AddFlight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddFlightResponse" message="tns:IService1_AddFlight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSignInCredentials">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSignInCredentials" message="tns:IService1_GetSignInCredentials_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSignInCredentialsResponse" message="tns:IService1_GetSignInCredentials_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFlights">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllFlights" message="tns:IService1_GetAllFlights_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllFlightsResponse" message="tns:IService1_GetAllFlights_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyFlights">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMyFlights" message="tns:IService1_GetMyFlights_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMyFlightsResponse" message="tns:IService1_GetMyFlights_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSeat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddSeat" message="tns:IService1_AddSeat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddSeatResponse" message="tns:IService1_AddSeat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedSeats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSelectedSeats" message="tns:IService1_GetSelectedSeats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSelectedSeatsResponse" message="tns:IService1_GetSelectedSeats_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFlight">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddFlight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSignInCredentials">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSignInCredentials" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFlights">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllFlights" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyFlights">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMyFlights" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSeat">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddSeat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedSeats">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetSelectedSeats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:49987/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
